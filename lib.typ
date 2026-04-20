@@ -2,7 +2,7 @@
 #import "@preview/itemize:0.2.0" as _itemize
 
 #let blog-style(body) = {
-  set text(font: (en-serif, cn-serif))
+  set text(font: (en-serif, cn-serif), lang: "zh")
 
   set page(numbering: "1")
   set par(justify: true, first-line-indent: 2em)
@@ -51,6 +51,21 @@
   show: _itemize.default-enum-list.with(indent: 1em)
   show: show-example
   show: show-tiles
+
+  include "cover.typ"
+
+  show outline.entry: it => if it.level == 1 {
+    link(
+      it.element.location(),
+      it.indented(it.prefix(), text(weight: "bold", it.body())),
+    )
+  } else {
+    it
+  }
+
+  outline(
+    depth: 2,
+  )
 
   body
 }
