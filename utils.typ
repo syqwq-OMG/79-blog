@@ -30,11 +30,11 @@
   text(font: (en-sans, cn-sans), weight: 350, fill: color)[#t]
 }
 #let thmtext(t, color: rgb("#000000")) = {
-  let a = t.children
-  if (a.at(0) == [ ]) {
-    a.remove(0)
-  }
-  t = a.join()
+  // let a = t.children
+  // if (a.at(0) == [ ]) {
+  //   a.remove(0)
+  // }
+  // t = a.join()
 
   text(font: (en-sans, cn-sans), weight: 326, fill: color)[#t]
 }
