@@ -2,6 +2,7 @@
 #import "@preview/theorion:0.6.0":*
 #import "@preview/showybox:2.0.4":showybox
 #import "@preview/gentle-clues:1.3.1":idea
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
 
 #let cn-serif = "Source Han Serif SC"
 #let en-serif = "New Computer Modern"
