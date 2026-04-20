@@ -1,7 +1,7 @@
 #import "tiles.typ":*
 #import "@preview/theorion:0.6.0":*
 #import "@preview/showybox:2.0.4":showybox
-
+#import "@preview/gentle-clues:1.3.1":idea
 
 #let cn-serif = "Source Han Serif SC"
 #let en-serif = "New Computer Modern"
@@ -9,10 +9,18 @@
 #let en-sans = "New Computer Modern Sans"
 #let cn-kai = "LXGW WenKai"
 
-#let mhand(..arg) = {
+#let mhand(..args) = {
   set align(center)
-  hand(..arg)
+  hand(..args)
 }
+
+#let conclusion(body) = idea(
+  title:text(font: (en-sans, cn-sans), fill: rgb("#136179"))[总结、理论],
+  text(font: (en-sans, cn-sans), fill: rgb("#2d4b69"), body)
+)
+
+// text hand
+#let thand(..args) = box(hand(..args), baseline: .5em)
 
 #let thmprefix(t, color: rgb("#000000")) = {
   text(font: (en-sans, cn-sans), weight: 650, fill: color)[#t]

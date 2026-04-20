@@ -3,5 +3,5 @@
 
 ## todo
 
-- [] outline refined maybe to 2 columns
-- [] page number of cover delete
+- [ ] outline refined maybe to 2 columns
+- [ ] page number of cover delete

@@ -8,6 +8,7 @@
   set par(justify: true, first-line-indent: 2em)
 
   set heading(numbering: "1.1")
+  set enum(numbering: "(1.a)")
   show heading.where(level: 1): h => context {
     set align(center + horizon)
     set page(numbering: (t, ..) => none)
