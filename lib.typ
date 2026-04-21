@@ -1,5 +1,6 @@
 #import "utils.typ": *
 #import "@preview/itemize:0.2.0" as _itemize
+#import "@preview/cjk-unbreak:0.2.3": remove-cjk-break-space
 
 #let blog-style(body) = {
   set text(font: (en-serif, cn-serif), lang: "zh")
@@ -52,6 +53,7 @@
   show: _itemize.default-enum-list.with(indent: 1em)
   show: show-example
   show: show-tiles
+  show: remove-cjk-break-space
 
   include "cover.typ"
 
